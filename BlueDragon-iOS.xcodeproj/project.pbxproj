@@ -8,17 +8,19 @@
 
 /* Begin PBXBuildFile section */
 		58B730A22A5E4B220061F9C7 /* BlueDragon_iOSApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58B730A12A5E4B220061F9C7 /* BlueDragon_iOSApp.swift */; };
-		58B730A42A5E4B220061F9C7 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58B730A32A5E4B220061F9C7 /* ContentView.swift */; };
 		58B730A62A5E4B230061F9C7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 58B730A52A5E4B230061F9C7 /* Assets.xcassets */; };
 		58B730A92A5E4B230061F9C7 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 58B730A82A5E4B230061F9C7 /* Preview Assets.xcassets */; };
+		58B730B52A5E67450061F9C7 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58B730B42A5E67450061F9C7 /* LoginView.swift */; };
+		58B730B82A5E68BE0061F9C7 /* LoginState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58B730B72A5E68BE0061F9C7 /* LoginState.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		58B7309E2A5E4B220061F9C7 /* BlueDragon-iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "BlueDragon-iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		58B730A12A5E4B220061F9C7 /* BlueDragon_iOSApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlueDragon_iOSApp.swift; sourceTree = "<group>"; };
-		58B730A32A5E4B220061F9C7 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		58B730A52A5E4B230061F9C7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		58B730A82A5E4B230061F9C7 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		58B730B42A5E67450061F9C7 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		58B730B72A5E68BE0061F9C7 /* LoginState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginState.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,7 +54,7 @@
 			isa = PBXGroup;
 			children = (
 				58B730A12A5E4B220061F9C7 /* BlueDragon_iOSApp.swift */,
-				58B730A32A5E4B220061F9C7 /* ContentView.swift */,
+				58B730AF2A5E4B750061F9C7 /* Features */,
 				58B730A52A5E4B230061F9C7 /* Assets.xcassets */,
 				58B730A72A5E4B230061F9C7 /* Preview Content */,
 			);
@@ -65,6 +67,55 @@
 				58B730A82A5E4B230061F9C7 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		58B730AF2A5E4B750061F9C7 /* Features */ = {
+			isa = PBXGroup;
+			children = (
+				58B730B22A5E4B870061F9C7 /* View */,
+				58B730B12A5E4B840061F9C7 /* State */,
+				58B730B02A5E4B810061F9C7 /* Model */,
+			);
+			path = Features;
+			sourceTree = "<group>";
+		};
+		58B730B02A5E4B810061F9C7 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		58B730B12A5E4B840061F9C7 /* State */ = {
+			isa = PBXGroup;
+			children = (
+				58B730B62A5E689F0061F9C7 /* Login */,
+			);
+			path = State;
+			sourceTree = "<group>";
+		};
+		58B730B22A5E4B870061F9C7 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				58B730B32A5E67280061F9C7 /* Login */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		58B730B32A5E67280061F9C7 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				58B730B42A5E67450061F9C7 /* LoginView.swift */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		58B730B62A5E689F0061F9C7 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				58B730B72A5E68BE0061F9C7 /* LoginState.swift */,
+			);
+			path = Login;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -137,7 +188,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				58B730A42A5E4B220061F9C7 /* ContentView.swift in Sources */,
+				58B730B52A5E67450061F9C7 /* LoginView.swift in Sources */,
+				58B730B82A5E68BE0061F9C7 /* LoginState.swift in Sources */,
 				58B730A22A5E4B220061F9C7 /* BlueDragon_iOSApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
