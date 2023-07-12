@@ -14,6 +14,7 @@ struct LoginView: View {
                     .resizable()
                     .frame(width: 190, height: 92.7)
                     .padding(.bottom)
+                
                 TextField("아이디 적어주세요", text: $state.id)
                     .autocapitalization(.none)
                     .disableAutocorrection(true)

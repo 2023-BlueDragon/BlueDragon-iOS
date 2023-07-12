@@ -12,6 +12,9 @@
 		58B730A92A5E4B230061F9C7 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 58B730A82A5E4B230061F9C7 /* Preview Assets.xcassets */; };
 		58B730B52A5E67450061F9C7 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58B730B42A5E67450061F9C7 /* LoginView.swift */; };
 		58B730B82A5E68BE0061F9C7 /* LoginState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58B730B72A5E68BE0061F9C7 /* LoginState.swift */; };
+		58FDCD8B2A5E77120007CE01 /* SplashView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58FDCD8A2A5E77120007CE01 /* SplashView.swift */; };
+		58FDCD8E2A5E77CC0007CE01 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 58FDCD8D2A5E77CC0007CE01 /* Alamofire */; };
+		58FDCD912A5E79FB0007CE01 /* SplashState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58FDCD902A5E79FB0007CE01 /* SplashState.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -21,6 +24,8 @@
 		58B730A82A5E4B230061F9C7 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		58B730B42A5E67450061F9C7 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		58B730B72A5E68BE0061F9C7 /* LoginState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginState.swift; sourceTree = "<group>"; };
+		58FDCD8A2A5E77120007CE01 /* SplashView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashView.swift; sourceTree = "<group>"; };
+		58FDCD902A5E79FB0007CE01 /* SplashState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashState.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -28,6 +33,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				58FDCD8E2A5E77CC0007CE01 /* Alamofire in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -89,6 +95,7 @@
 		58B730B12A5E4B840061F9C7 /* State */ = {
 			isa = PBXGroup;
 			children = (
+				58FDCD8F2A5E79E20007CE01 /* Splash */,
 				58B730B62A5E689F0061F9C7 /* Login */,
 			);
 			path = State;
@@ -97,6 +104,7 @@
 		58B730B22A5E4B870061F9C7 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				58FDCD892A5E76EC0007CE01 /* Splash */,
 				58B730B32A5E67280061F9C7 /* Login */,
 			);
 			path = View;
@@ -118,6 +126,22 @@
 			path = Login;
 			sourceTree = "<group>";
 		};
+		58FDCD892A5E76EC0007CE01 /* Splash */ = {
+			isa = PBXGroup;
+			children = (
+				58FDCD8A2A5E77120007CE01 /* SplashView.swift */,
+			);
+			path = Splash;
+			sourceTree = "<group>";
+		};
+		58FDCD8F2A5E79E20007CE01 /* Splash */ = {
+			isa = PBXGroup;
+			children = (
+				58FDCD902A5E79FB0007CE01 /* SplashState.swift */,
+			);
+			path = Splash;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -134,6 +158,9 @@
 			dependencies = (
 			);
 			name = "BlueDragon-iOS";
+			packageProductDependencies = (
+				58FDCD8D2A5E77CC0007CE01 /* Alamofire */,
+			);
 			productName = "BlueDragon-iOS";
 			productReference = 58B7309E2A5E4B220061F9C7 /* BlueDragon-iOS.app */;
 			productType = "com.apple.product-type.application";
@@ -162,6 +189,9 @@
 				Base,
 			);
 			mainGroup = 58B730952A5E4B220061F9C7;
+			packageReferences = (
+				58FDCD8C2A5E77CC0007CE01 /* XCRemoteSwiftPackageReference "Alamofire" */,
+			);
 			productRefGroup = 58B7309F2A5E4B220061F9C7 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -188,7 +218,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				58FDCD912A5E79FB0007CE01 /* SplashState.swift in Sources */,
 				58B730B52A5E67450061F9C7 /* LoginView.swift in Sources */,
+				58FDCD8B2A5E77120007CE01 /* SplashView.swift in Sources */,
 				58B730B82A5E68BE0061F9C7 /* LoginState.swift in Sources */,
 				58B730A22A5E4B220061F9C7 /* BlueDragon_iOSApp.swift in Sources */,
 			);
@@ -327,6 +359,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -356,6 +389,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -391,6 +425,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		58FDCD8C2A5E77CC0007CE01 /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/Alamofire";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		58FDCD8D2A5E77CC0007CE01 /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 58FDCD8C2A5E77CC0007CE01 /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = Alamofire;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 58B730962A5E4B220061F9C7 /* Project object */;
 }
