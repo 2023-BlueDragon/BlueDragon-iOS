@@ -38,13 +38,13 @@ struct LoginView: View {
                 HStack(spacing: 5) {
                     Text("아직 계정이 없으신가요?")
                     Button(action: {
-                        showModal = true
+                        self.showModal.toggle()
                     }) {
                         Text("회원 가입")
                     }
-                    .sheet(isPresented: $showModal) {
-                                JoinMemberView()
-                            }
+                    .fullScreenCover(isPresented: $showModal) {
+                        JoinMemberView()
+                    }
                 }
                 .padding(.bottom)
                 

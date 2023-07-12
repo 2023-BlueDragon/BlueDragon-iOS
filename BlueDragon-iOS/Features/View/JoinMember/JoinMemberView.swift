@@ -2,6 +2,7 @@ import SwiftUI
 
 struct JoinMemberView: View {
     
+    @Environment(\.dismiss) var dismiss
     @ObservedObject var state = JoinMemberState()
     
     var body: some View {
@@ -60,6 +61,15 @@ struct JoinMemberView: View {
                         }
                 }
                 
+                HStack(spacing: 5) {
+                    Text("계정이 있으신가요?")
+                    Button(action: {
+                        dismiss()
+                    }) {
+                        Text("로그인")
+                    }
+                }
+                
                 Spacer()
                 
                 Button(action: {
@@ -77,11 +87,5 @@ struct JoinMemberView: View {
             }
             .padding(.horizontal, 10)
         }
-    }
-}
-
-struct JoinMemberView_preView: PreviewProvider {
-    static var previews: some View {
-        JoinMemberView()
     }
 }
