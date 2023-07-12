@@ -3,11 +3,12 @@ import SwiftUI
 struct LoginView: View {
     
     @ObservedObject var state = LoginState()
+    @State var showModal: Bool = false
     
     var body: some View {
         NavigationView {
             
-            VStack() {
+            VStack {
                 Spacer()
                 
                 Image("logo")
@@ -15,7 +16,7 @@ struct LoginView: View {
                     .frame(width: 190, height: 92.7)
                     .padding(.bottom)
                 
-                TextField("아이디 적어주세요", text: $state.id)
+                TextField("이메일 적어주세요", text: $state.id)
                     .autocapitalization(.none)
                     .disableAutocorrection(true)
                     .padding()
@@ -37,11 +38,13 @@ struct LoginView: View {
                 HStack(spacing: 5) {
                     Text("아직 계정이 없으신가요?")
                     Button(action: {
-                        
+                        showModal = true
                     }) {
                         Text("회원 가입")
                     }
-                    Spacer()
+                    .sheet(isPresented: $showModal) {
+                                JoinMemberView()
+                            }
                 }
                 .padding(.bottom)
                 
