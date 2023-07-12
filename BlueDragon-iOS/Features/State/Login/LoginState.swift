@@ -2,27 +2,31 @@ import Foundation
 import Alamofire
 
 class LoginState: ObservableObject {
-    @Published var email: String = ""
-    @Published var password: String = ""
     
-    func login() {
+    @Published var id: String = ""
+    @Published var passWord: String = ""
+    
+    func login(completion: @escaping (Bool) -> Void) {
         let query : Parameters = [
-            "id" : email,
-            "passWord" : password
+            "id" : id,
+            "passWord" : passWord
         ]
         
-        let request = AF.request("http://15.164.81.241:8080/auth/login",
-                                 method: .post,
-                                 parameters: query,
-                                 encoding: JSONEncoding.default)
+        AF.request("http://15.164.81.241:8080/auth/login",
+                   method: .post,
+                   parameters: query,
+                   encoding: JSONEncoding.default)
         { $0.timeoutInterval = 60 }
-        request.responseJSON { response in
-            switch response.result {
-            case .success(let value):
-                print("Response: \(value)")
-            case .failure(let error):
-                print(error)
+            .validate()
+            .responseJSON { response in
+                switch response.result {
+                case .success(let value):
+                    print("Response: \(value)")
+                    completion(true)
+                case .failure(let error):
+                    print(error)
+                    completion(false)
+                }
             }
-        }
     }
 }

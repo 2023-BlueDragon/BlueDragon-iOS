@@ -4,10 +4,11 @@ struct LoginView: View {
     
     @ObservedObject var state = LoginState()
     @State var showModal: Bool = false
+    @State private var showAlert = false
+    @State private var isLoggedIn = false
     
     var body: some View {
         NavigationView {
-            
             VStack {
                 Spacer()
                 
@@ -16,7 +17,7 @@ struct LoginView: View {
                     .frame(width: 190, height: 92.7)
                     .padding(.bottom)
                 
-                TextField("이메일 적어주세요", text: $state.email)
+                TextField("이메일 적어주세요", text: $state.id)
                     .autocapitalization(.none)
                     .disableAutocorrection(true)
                     .padding()
@@ -26,7 +27,7 @@ struct LoginView: View {
                     )
                     .padding(.bottom)
                 
-                SecureField("비밀번호를 적어주세요", text: $state.password)
+                SecureField("비밀번호를 적어주세요", text: $state.passWord)
                     .autocapitalization(.none)
                     .disableAutocorrection(true)
                     .padding()
@@ -51,21 +52,36 @@ struct LoginView: View {
                 Spacer()
                 
                 Button(action: {
-                    state.login()
+                    state.login { success in
+                        showAlert = !success
+                        isLoggedIn = success
+                    }
                 }) {
-                    Text("회원 가입")
+                    Text("로그인")
                         .fontWeight(.bold)
                         .padding()
                         .frame(maxWidth: .infinity)
                         .foregroundColor(.white)
                         .background(Color.accentColor)
-                        .cornerRadius(10)
+                        .cornerRadius(30)
+                }
+                .fullScreenCover(isPresented: $isLoggedIn) {
+                    MainView()
                 }
             }
-            .padding(.horizontal, 10)
+            .padding()
+            .padding(.horizontal, 20)
+            .alert(isPresented: $showAlert) {
+                Alert(
+                    title: Text("오류"),
+                    message: Text("ID나 Password가 틀렸습니다."),
+                    dismissButton: .default(Text("확인"))
+                )
+            }
         }
     }
 }
+
 
 struct LoginView_PreView: PreviewProvider {
     static var previews: some View {
