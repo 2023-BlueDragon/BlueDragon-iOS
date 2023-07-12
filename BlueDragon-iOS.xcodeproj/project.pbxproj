@@ -22,6 +22,7 @@
 		58FDCDA02A5ED3E60007CE01 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58FDCD9F2A5ED3E60007CE01 /* MainView.swift */; };
 		58FDCDA32A5ED7550007CE01 /* MainState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58FDCDA22A5ED7550007CE01 /* MainState.swift */; };
 		58FDCDA62A5EE6230007CE01 /* PostView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58FDCDA52A5EE6230007CE01 /* PostView.swift */; };
+		58FDCDA92A5F2EAB0007CE01 /* PostState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58FDCDA82A5F2EAB0007CE01 /* PostState.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,6 +41,7 @@
 		58FDCD9F2A5ED3E60007CE01 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 		58FDCDA22A5ED7550007CE01 /* MainState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainState.swift; sourceTree = "<group>"; };
 		58FDCDA52A5EE6230007CE01 /* PostView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostView.swift; sourceTree = "<group>"; };
+		58FDCDA82A5F2EAB0007CE01 /* PostState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostState.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -223,6 +225,7 @@
 		58FDCDA72A5EE62D0007CE01 /* Post */ = {
 			isa = PBXGroup;
 			children = (
+				58FDCDA82A5F2EAB0007CE01 /* PostState.swift */,
 			);
 			path = Post;
 			sourceTree = "<group>";
@@ -312,6 +315,7 @@
 				58FDCD8B2A5E77120007CE01 /* SplashView.swift in Sources */,
 				58FDCD9E2A5EB4000007CE01 /* JoinmemberModel.swift in Sources */,
 				58FDCD9B2A5EB3C70007CE01 /* LoginModel.swift in Sources */,
+				58FDCDA92A5F2EAB0007CE01 /* PostState.swift in Sources */,
 				58B730B82A5E68BE0061F9C7 /* LoginState.swift in Sources */,
 				58FDCDA62A5EE6230007CE01 /* PostView.swift in Sources */,
 				58B730A22A5E4B220061F9C7 /* BlueDragon_iOSApp.swift in Sources */,

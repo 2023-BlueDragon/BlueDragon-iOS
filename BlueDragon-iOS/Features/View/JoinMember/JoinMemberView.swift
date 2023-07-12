@@ -4,6 +4,8 @@ struct JoinMemberView: View {
     
     @Environment(\.dismiss) var dismiss
     @ObservedObject var state = JoinMemberState()
+    @State private var showAlert = false
+    @State private var showSuccessAlert = false
     
     var body: some View {
         NavigationView {
@@ -73,7 +75,10 @@ struct JoinMemberView: View {
                 Spacer()
                 
                 Button(action: {
-                    state.join()
+                    state.join { success in
+                        showAlert = true
+                        showSuccessAlert = success
+                    }
                 }) {
                     Text("회원 가입")
                         .fontWeight(.bold)
@@ -81,11 +86,28 @@ struct JoinMemberView: View {
                         .frame(maxWidth: .infinity)
                         .foregroundColor(.white)
                         .background(Color.accentColor)
-                        .cornerRadius(10)
+                        .cornerRadius(30)
                 }
                 
             }
-            .padding(.horizontal, 10)
+            .padding(.horizontal, 30)
+            .alert(isPresented: $showAlert) {
+                if showSuccessAlert {
+                    return Alert(
+                        title: Text("회원 가입 성공"),
+                        message: Text("회원 가입이 성공적으로 완료되었습니다."),
+                        dismissButton: .default(Text("확인")) {
+                            dismiss()
+                        }
+                    )
+                } else {
+                    return Alert(
+                        title: Text("오류"),
+                        message: Text("회원 가입 중 오류가 발생했습니다."),
+                        dismissButton: .default(Text("확인"))
+                    )
+                }
+            }
         }
     }
 }

@@ -7,7 +7,7 @@ class JoinMemberState: ObservableObject {
     @Published var email: String = ""
     @Published var pw: String = ""
     
-    func join() {
+    func join(completion: @escaping (Bool) -> Void) {
         let query : Parameters = [
             "nickName" : nickname,
             "email" : email,
@@ -23,8 +23,10 @@ class JoinMemberState: ObservableObject {
                 switch response.result {
                 case .success(let value):
                     print("Response: \(value)")
+                    completion(true)
                 case .failure(let error):
                     print(error)
+                    completion(false)
                 }
             }
     }
