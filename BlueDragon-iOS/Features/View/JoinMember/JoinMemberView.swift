@@ -18,10 +18,10 @@ struct JoinMemberView: View {
                     .padding()
                 
                 VStack(alignment: .leading) {
-                    Text("이름")
+                    Text("nickname")
                         .fontWeight(.bold)
                         .font(.title3)
-                    TextField("이름 입력해주세요", text: $state.name)
+                    TextField("5글자 이상으로 써주세요", text: $state.name)
                         .autocapitalization(.none)
                         .disableAutocorrection(true)
                         .padding()
@@ -36,7 +36,7 @@ struct JoinMemberView: View {
                         .fontWeight(.bold)
                         .font(.title3)
                         .padding(.top)
-                    TextField("이메일 입력해주세요", text: $state.email)
+                    TextField("이메일 써주세요", text: $state.email)
                         .autocapitalization(.none)
                         .disableAutocorrection(true)
                         .padding()
@@ -51,7 +51,7 @@ struct JoinMemberView: View {
                         .fontWeight(.bold)
                         .font(.title3)
                         .padding(.top)
-                    TextField("비밀번호 입력해주세요", text: $state.pw)
+                    TextField("8자 이상으로해주세요", text: $state.pw)
                         .autocapitalization(.none)
                         .disableAutocorrection(true)
                         .padding()
@@ -73,7 +73,7 @@ struct JoinMemberView: View {
                 Spacer()
                 
                 Button(action: {
-                    
+                    state.join()
                 }) {
                     Text("회원 가입")
                         .fontWeight(.bold)

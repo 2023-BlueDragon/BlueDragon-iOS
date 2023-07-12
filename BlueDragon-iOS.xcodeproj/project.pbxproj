@@ -17,6 +17,9 @@
 		58FDCD912A5E79FB0007CE01 /* SplashState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58FDCD902A5E79FB0007CE01 /* SplashState.swift */; };
 		58FDCD952A5E834B0007CE01 /* JoinMemberView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58FDCD942A5E834B0007CE01 /* JoinMemberView.swift */; };
 		58FDCD982A5E881A0007CE01 /* JoinMemberState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58FDCD972A5E881A0007CE01 /* JoinMemberState.swift */; };
+		58FDCD9B2A5EB3C70007CE01 /* LoginModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58FDCD9A2A5EB3C70007CE01 /* LoginModel.swift */; };
+		58FDCD9E2A5EB4000007CE01 /* JoinmemberModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58FDCD9D2A5EB4000007CE01 /* JoinmemberModel.swift */; };
+		58FDCDA02A5ED3E60007CE01 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58FDCD9F2A5ED3E60007CE01 /* MainView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +33,9 @@
 		58FDCD902A5E79FB0007CE01 /* SplashState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashState.swift; sourceTree = "<group>"; };
 		58FDCD942A5E834B0007CE01 /* JoinMemberView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JoinMemberView.swift; sourceTree = "<group>"; };
 		58FDCD972A5E881A0007CE01 /* JoinMemberState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JoinMemberState.swift; sourceTree = "<group>"; };
+		58FDCD9A2A5EB3C70007CE01 /* LoginModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginModel.swift; sourceTree = "<group>"; };
+		58FDCD9D2A5EB4000007CE01 /* JoinmemberModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JoinmemberModel.swift; sourceTree = "<group>"; };
+		58FDCD9F2A5ED3E60007CE01 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -92,6 +98,8 @@
 		58B730B02A5E4B810061F9C7 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				58FDCD9C2A5EB3DB0007CE01 /* JoiinMember */,
+				58FDCD992A5EB3AA0007CE01 /* Login */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -99,9 +107,9 @@
 		58B730B12A5E4B840061F9C7 /* State */ = {
 			isa = PBXGroup;
 			children = (
-				58FDCD962A5E87880007CE01 /* JoinMember */,
 				58FDCD8F2A5E79E20007CE01 /* Splash */,
 				58B730B62A5E689F0061F9C7 /* Login */,
+				58FDCD962A5E87880007CE01 /* JoinMember */,
 			);
 			path = State;
 			sourceTree = "<group>";
@@ -152,6 +160,7 @@
 		58FDCD922A5E82EB0007CE01 /* main */ = {
 			isa = PBXGroup;
 			children = (
+				58FDCD9F2A5ED3E60007CE01 /* MainView.swift */,
 			);
 			path = main;
 			sourceTree = "<group>";
@@ -170,6 +179,22 @@
 				58FDCD972A5E881A0007CE01 /* JoinMemberState.swift */,
 			);
 			path = JoinMember;
+			sourceTree = "<group>";
+		};
+		58FDCD992A5EB3AA0007CE01 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				58FDCD9A2A5EB3C70007CE01 /* LoginModel.swift */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		58FDCD9C2A5EB3DB0007CE01 /* JoiinMember */ = {
+			isa = PBXGroup;
+			children = (
+				58FDCD9D2A5EB4000007CE01 /* JoinmemberModel.swift */,
+			);
+			path = JoiinMember;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -251,8 +276,11 @@
 				58FDCD912A5E79FB0007CE01 /* SplashState.swift in Sources */,
 				58B730B52A5E67450061F9C7 /* LoginView.swift in Sources */,
 				58FDCD952A5E834B0007CE01 /* JoinMemberView.swift in Sources */,
+				58FDCDA02A5ED3E60007CE01 /* MainView.swift in Sources */,
 				58FDCD982A5E881A0007CE01 /* JoinMemberState.swift in Sources */,
 				58FDCD8B2A5E77120007CE01 /* SplashView.swift in Sources */,
+				58FDCD9E2A5EB4000007CE01 /* JoinmemberModel.swift in Sources */,
+				58FDCD9B2A5EB3C70007CE01 /* LoginModel.swift in Sources */,
 				58B730B82A5E68BE0061F9C7 /* LoginState.swift in Sources */,
 				58B730A22A5E4B220061F9C7 /* BlueDragon_iOSApp.swift in Sources */,
 			);

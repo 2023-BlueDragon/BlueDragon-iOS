@@ -12,7 +12,7 @@ struct SplashView: View {
                 ZStack(alignment: .center) {
                     Image("logo")
                         .resizable()
-                        .frame(width: 240, height: 123.69)
+                        .frame(width: 200, height: 98)
                 }
             }
         }
