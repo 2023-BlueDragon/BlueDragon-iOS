@@ -9,7 +9,7 @@ struct JoinMemberView: View {
         NavigationView {
             VStack {
                 
-                Image("logo")
+                Image("Logo")
                     .resizable()
                     .frame(width: 161.42, height: 80)
                 Text("회원 가입")
@@ -18,10 +18,10 @@ struct JoinMemberView: View {
                     .padding()
                 
                 VStack(alignment: .leading) {
-                    Text("nickname")
+                    Text("이름")
                         .fontWeight(.bold)
                         .font(.title3)
-                    TextField("5글자 이상으로 써주세요", text: $state.name)
+                    TextField("5글자 이상으로 써주세요", text: $state.nickname)
                         .autocapitalization(.none)
                         .disableAutocorrection(true)
                         .padding()

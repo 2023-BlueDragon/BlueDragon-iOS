@@ -20,6 +20,8 @@
 		58FDCD9B2A5EB3C70007CE01 /* LoginModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58FDCD9A2A5EB3C70007CE01 /* LoginModel.swift */; };
 		58FDCD9E2A5EB4000007CE01 /* JoinmemberModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58FDCD9D2A5EB4000007CE01 /* JoinmemberModel.swift */; };
 		58FDCDA02A5ED3E60007CE01 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58FDCD9F2A5ED3E60007CE01 /* MainView.swift */; };
+		58FDCDA32A5ED7550007CE01 /* MainState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58FDCDA22A5ED7550007CE01 /* MainState.swift */; };
+		58FDCDA62A5EE6230007CE01 /* PostView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58FDCDA52A5EE6230007CE01 /* PostView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +38,8 @@
 		58FDCD9A2A5EB3C70007CE01 /* LoginModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginModel.swift; sourceTree = "<group>"; };
 		58FDCD9D2A5EB4000007CE01 /* JoinmemberModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JoinmemberModel.swift; sourceTree = "<group>"; };
 		58FDCD9F2A5ED3E60007CE01 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
+		58FDCDA22A5ED7550007CE01 /* MainState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainState.swift; sourceTree = "<group>"; };
+		58FDCDA52A5EE6230007CE01 /* PostView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,6 +111,8 @@
 		58B730B12A5E4B840061F9C7 /* State */ = {
 			isa = PBXGroup;
 			children = (
+				58FDCDA72A5EE62D0007CE01 /* Post */,
+				58FDCDA12A5ED7420007CE01 /* main */,
 				58FDCD8F2A5E79E20007CE01 /* Splash */,
 				58B730B62A5E689F0061F9C7 /* Login */,
 				58FDCD962A5E87880007CE01 /* JoinMember */,
@@ -120,6 +126,7 @@
 				58FDCD892A5E76EC0007CE01 /* Splash */,
 				58B730B32A5E67280061F9C7 /* Login */,
 				58FDCD932A5E83070007CE01 /* JoinMember */,
+				58FDCDA42A5EE6050007CE01 /* Post */,
 				58FDCD922A5E82EB0007CE01 /* main */,
 			);
 			path = View;
@@ -195,6 +202,29 @@
 				58FDCD9D2A5EB4000007CE01 /* JoinmemberModel.swift */,
 			);
 			path = JoiinMember;
+			sourceTree = "<group>";
+		};
+		58FDCDA12A5ED7420007CE01 /* main */ = {
+			isa = PBXGroup;
+			children = (
+				58FDCDA22A5ED7550007CE01 /* MainState.swift */,
+			);
+			path = main;
+			sourceTree = "<group>";
+		};
+		58FDCDA42A5EE6050007CE01 /* Post */ = {
+			isa = PBXGroup;
+			children = (
+				58FDCDA52A5EE6230007CE01 /* PostView.swift */,
+			);
+			path = Post;
+			sourceTree = "<group>";
+		};
+		58FDCDA72A5EE62D0007CE01 /* Post */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Post;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -273,6 +303,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				58FDCDA32A5ED7550007CE01 /* MainState.swift in Sources */,
 				58FDCD912A5E79FB0007CE01 /* SplashState.swift in Sources */,
 				58B730B52A5E67450061F9C7 /* LoginView.swift in Sources */,
 				58FDCD952A5E834B0007CE01 /* JoinMemberView.swift in Sources */,
@@ -282,6 +313,7 @@
 				58FDCD9E2A5EB4000007CE01 /* JoinmemberModel.swift in Sources */,
 				58FDCD9B2A5EB3C70007CE01 /* LoginModel.swift in Sources */,
 				58B730B82A5E68BE0061F9C7 /* LoginState.swift in Sources */,
+				58FDCDA62A5EE6230007CE01 /* PostView.swift in Sources */,
 				58B730A22A5E4B220061F9C7 /* BlueDragon_iOSApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

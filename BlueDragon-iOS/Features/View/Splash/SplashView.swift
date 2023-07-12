@@ -10,7 +10,7 @@ struct SplashView: View {
                 LoginView()
             } else {
                 ZStack(alignment: .center) {
-                    Image("logo")
+                    Image("Logo")
                         .resizable()
                         .frame(width: 200, height: 98)
                 }

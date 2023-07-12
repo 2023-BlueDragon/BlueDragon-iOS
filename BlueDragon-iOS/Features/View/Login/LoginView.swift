@@ -11,12 +11,12 @@ struct LoginView: View {
             VStack {
                 Spacer()
                 
-                Image("logo")
+                Image("Logo")
                     .resizable()
                     .frame(width: 190, height: 92.7)
                     .padding(.bottom)
                 
-                TextField("이메일 적어주세요", text: $state.id)
+                TextField("이메일 적어주세요", text: $state.email)
                     .autocapitalization(.none)
                     .disableAutocorrection(true)
                     .padding()
@@ -26,7 +26,7 @@ struct LoginView: View {
                     )
                     .padding(.bottom)
                 
-                TextField("비밀번호를 적어주세요", text: $state.password)
+                SecureField("비밀번호를 적어주세요", text: $state.password)
                     .autocapitalization(.none)
                     .disableAutocorrection(true)
                     .padding()
@@ -51,9 +51,9 @@ struct LoginView: View {
                 Spacer()
                 
                 Button(action: {
-                    
+                    state.login()
                 }) {
-                    Text("로그인")
+                    Text("회원 가입")
                         .fontWeight(.bold)
                         .padding()
                         .frame(maxWidth: .infinity)
